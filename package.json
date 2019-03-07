@@ -1,0 +1,37 @@
+{
+  "name": "fberti.dev",
+  "private": true,
+  "version": "1.0.0",
+  "repository": "git@github.com:bertilxi/fberti.dev.git",
+  "author": "Fernando Berti <bertilxi@gmail.com>",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build --modern",
+    "generate": "nuxt generate --modern",
+    "start": "nuxt start",
+    "lint": "eslint './**/*.{ts,vue}'",
+    "lint:fix": "eslint './**/*.{ts,vue}' --fix"
+  },
+  "dependencies": {
+    "nuxt": "latest",
+    "spectre.css": "^0.5.8",
+    "vue-property-decorator": "^8.1.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript": "latest",
+    "@typescript-eslint/eslint-plugin": "^1.5.0",
+    "@typescript-eslint/parser": "^1.5.0",
+    "@vue/eslint-config-prettier": "^4.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-vue": "^5.2.2",
+    "frontmatter-markdown-loader": "^1.6.0",
+    "node-sass": "^4.11.0",
+    "prettier": "^1.16.4",
+    "responsive-loader": "^1.2.0",
+    "sass-loader": "^7.1.0",
+    "sharp": "^0.22.0",
+    "typescript": "^3.4.1"
+  }
+}
