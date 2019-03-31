@@ -1,5 +1,6 @@
 import NuxtConfiguration from "@nuxt/config";
 import path from "path";
+import posts from "./content";
 
 const builtAt = new Date().toISOString();
 
@@ -51,7 +52,11 @@ const config: NuxtConfiguration = {
     }
   },
 
-  modules: []
+  modules: [],
+
+  generate: {
+    routes: [...posts.map(post => `/blog/${post}`)]
+  }
 };
 
 export default config;
