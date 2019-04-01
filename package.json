@@ -16,6 +16,7 @@
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "nuxt": "latest",
     "spectre.css": "^0.5.8",
+    "typeface-nunito": "^0.0.72",
     "vue-property-decorator": "^8.1.0"
   },
   "devDependencies": {
