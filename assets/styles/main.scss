@@ -6,3 +6,10 @@
   height: 100%;
   margin-bottom: 1rem;
 }
+
+.btn-link {
+  border-radius: 0;
+  &.active {
+    border-bottom: 3px solid $primary-color;
+  }
+}

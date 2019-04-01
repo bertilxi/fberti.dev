@@ -5,6 +5,10 @@ import posts from "./content";
 const builtAt = new Date().toISOString();
 
 const config: NuxtConfiguration = {
+  router: {
+    linkExactActiveClass: "active"
+  },
+
   css: ["@/assets/styles/main.scss"],
 
   loading: {
@@ -34,6 +38,17 @@ const config: NuxtConfiguration = {
   },
 
   build: {
+    cache: true,
+    extractCSS: true,
+    optimizeCSS: true,
+    parallel: true,
+    terser: {
+      terserOptions: {
+        // To speed up, uncomment these 2
+        // mangle: false,
+        // compress: false
+      }
+    },
     extend(config) {
       if (!config.module) {
         return;
