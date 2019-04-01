@@ -17,6 +17,9 @@ const config: NuxtConfiguration = {
   },
 
   head: {
+    htmlAttrs: {
+      lang: "en"
+    },
     title: "Fernando Berti | Frontend Developer",
     meta: [
       { charset: "utf-8" },
@@ -42,9 +45,14 @@ const config: NuxtConfiguration = {
     extractCSS: true,
     optimizeCSS: true,
     parallel: true,
+    html: {
+      minify: {
+        collapseWhitespace: true
+      }
+    },
     terser: {
       terserOptions: {
-        // To speed up, uncomment these 2
+        // To speed up, uncomment these 2. Bundle size increase though
         // mangle: false,
         // compress: false
       }
@@ -67,10 +75,15 @@ const config: NuxtConfiguration = {
     }
   },
 
-  modules: [],
+  modules: ["@nuxtjs/pwa"],
 
   generate: {
     routes: [...posts.map(post => `/blog/${post}`)]
+  },
+
+  manifest: {
+    name: "Fernando Berti",
+    lang: "en"
   }
 };
 
