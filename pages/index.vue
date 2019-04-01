@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h3 class="text-center">
+    <h2>
       <strong>
         Hello, I am Fernando, and this is my website.
       </strong>
-    </h3>
-    <p>
-      I am a frontend developer, an UI engineer, a webpack tuner.
-    </p>
+    </h2>
+    <h4>
+      I am a frontend developer, an UI engineer, a Webpack tuner. <br />
+      Working with React by day and tinkering with Vue by night.
+    </h4>
   </div>
 </template>

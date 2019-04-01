@@ -1,6 +1,15 @@
 @import "./spectre.scss";
 @import "~typeface-nunito/index.css";
 
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
 .card {
   border: 0;
   box-shadow: 0 0.25rem 1rem rgba(48, 55, 66, 0.15);

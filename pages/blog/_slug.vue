@@ -21,6 +21,18 @@ export default {
     return {
       md
     };
+  },
+  head() {
+    return {
+      title: this.md.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.md.description
+        }
+      ]
+    };
   }
 };
 </script>

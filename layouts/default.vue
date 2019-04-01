@@ -4,8 +4,8 @@
       <div class="column col-sm-12 col-md-10 col-8 col-mx-auto">
         <header class="navbar app-navbar">
           <section class="navbar-section">
-            <nuxt-link class="brand" to="/">
-              <h2>Fernando Berti</h2>
+            <nuxt-link to="/">
+              <h2 class="brand">Fernando Berti</h2>
             </nuxt-link>
           </section>
           <section class="navbar-section">
@@ -31,12 +31,10 @@
   z-index: 98;
 }
 .brand {
-  h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-  }
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 </style>
