@@ -38,7 +38,6 @@ const config: NuxtConfiguration = {
     cache: true,
     extractCSS: true,
     optimizeCSS: true,
-    parallel: true,
     html: {
       minify: {
         collapseWhitespace: true
