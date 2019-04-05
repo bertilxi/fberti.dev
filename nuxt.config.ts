@@ -43,6 +43,11 @@ const config: NuxtConfiguration = {
         collapseWhitespace: true
       }
     },
+    postcss : {
+      plugins: {
+        autoprefixer: {}
+      }
+    },
     terser: {
       terserOptions: {
         // To speed up, uncomment these 2. Bundle size increase though
