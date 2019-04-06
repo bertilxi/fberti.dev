@@ -5,6 +5,7 @@
   "repository": "git@github.com:bertilxi/fberti.dev.git",
   "author": "Fernando Berti <bertilxi@gmail.com>",
   "scripts": {
+    "clean": "rm -rf .nuxt node_modules yarn.lock",
     "dev": "nuxt dev",
     "build": "nuxt build --modern",
     "generate": "nuxt generate --modern",
@@ -14,13 +15,13 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.14",
-    "nuxt": "latest",
+    "nuxt": "^2.6.1",
     "spectre.css": "^0.5.8",
-    "typeface-nunito": "^0.0.72",
+    "typeface-overpass": "^0.0.72",
     "vue-property-decorator": "^8.1.0"
   },
   "devDependencies": {
-    "@nuxt/typescript": "latest",
+    "@nuxt/typescript": "^2.6.1",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
     "@vue/eslint-config-prettier": "^4.0.1",
@@ -35,6 +36,6 @@
     "sass-loader": "^7.1.0",
     "sharp": "^0.22.0",
     "ts-node": "^8.0.3",
-    "typescript": "^3.4.1"
+    "typescript": "^3.4.2"
   }
 }
