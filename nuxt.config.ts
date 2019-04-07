@@ -43,7 +43,7 @@ const config: NuxtConfiguration = {
         collapseWhitespace: true
       }
     },
-    postcss : {
+    postcss: {
       plugins: {
         autoprefixer: {}
       }
