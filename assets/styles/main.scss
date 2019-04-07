@@ -1,5 +1,43 @@
 @import "./spectre.scss";
+@import "~prism-theme-night-owl/style.css";
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
 @import "~typeface-overpass/index.css";
+@import "~typeface-overpass-mono/index.css";
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: "Overpass Mono", monospace;
+  border-radius: $border-radius;
+
+  ::selection {
+    background: #7fdbca;
+    color: #011627;
+  }
+  ::-moz-selection {
+    background: #7fdbca;
+    color: #011627;
+  }
+}
+
+pre,
+code {
+  font-weight: 600;
+}
+
+pre {
+  margin: 0 0 1.2rem;
+}
+
+:not(pre) > code {
+  padding: 0.2em;
+  color: #7fdbca;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: $gray-color;
+}
 
 .page-enter-active,
 .page-leave-active {
@@ -22,4 +60,8 @@
   &.active {
     border-bottom: 3px solid $primary-color;
   }
+}
+
+.menu {
+  box-shadow: none;
 }

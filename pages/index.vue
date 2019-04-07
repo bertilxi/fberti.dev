@@ -6,8 +6,7 @@
       </strong>
     </h2>
     <h4>
-      I am a frontend developer, an UI engineer, a Webpack tuner. <br />
-      Working with React by day and tinkering with Vue by night.
+      I am a frontend developer, an UI engineer, a Webpack tuner.
     </h4>
   </div>
 </template>

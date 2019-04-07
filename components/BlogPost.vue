@@ -1,15 +1,15 @@
 <template>
-  <div class="card">
+  <nuxt-link class="card" :to="link">
     <div class="card-header">
-      <nuxt-link class="btn btn-sm btn-link float-right text-bold" :to="link">
-        Read more
-      </nuxt-link>
-      <nuxt-link class="card-title h5 text-bold text-dark" :to="link">
+      <span class="float-right text-bold">
+        {{ date }}
+      </span>
+      <h3 class="card-title h5 text-bold text-dark">
         {{ post.title }}
-      </nuxt-link>
+      </h3>
       <div class="card-subtitle text-gray">{{ post.description }}</div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -18,9 +18,17 @@ export default {
   computed: {
     link() {
       return `/blog/${this.post.name}`;
+    },
+    date() {
+      return new Date(this.post.date).toDateString();
     }
   }
 };
 </script>
 
-<style></style>
+<style lang="scss">
+a.card {
+  text-decoration: none;
+  color: black;
+}
+</style>
