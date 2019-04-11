@@ -1,6 +1,7 @@
 import puppeteer from "puppeteer";
 import { join } from "path";
 import { writeFileSync, readFileSync } from "fs";
+import globby from "globby";
 
 export const generate = async () => {
   const browser = await puppeteer.launch({
@@ -20,10 +21,26 @@ export const generate = async () => {
     waitUntil: "networkidle0"
   });
 
-  const styles = join(root, "assets/styles/resume.css");
-  const content = readFileSync(styles, "utf8");
-  await page.addStyleTag({ content });
-  const pdf = await page.pdf({ format: "A4" });
+  const styles = await globby([
+    join(root, "dist/_nuxt/*.css"),
+    join(root, "assets/styles/resume.css")
+  ]);
+
+  for (const style of styles) {
+    console.log(style);
+    const content = readFileSync(style, "utf8");
+    await page.addStyleTag({ content });
+  }
+
+  const pdf = await page.pdf({
+    format: "A4",
+    margin: {
+      top: "50px",
+      right: "50px",
+      bottom: "50px",
+      left: "50px"
+    }
+  });
 
   await browser.close();
   const destination = join(root, "dist/resume.pdf");

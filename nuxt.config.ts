@@ -35,7 +35,7 @@ const config: NuxtConfiguration = {
   },
 
   build: {
-    cache: true,
+    // cache: true,
     extractCSS: true,
     optimizeCSS: true,
     html: {
