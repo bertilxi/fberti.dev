@@ -1,9 +1,9 @@
 ---
 title: Webpack Optimization
-year: 2019
-description: Some tips and tricks i learned trying to squeeze webpack build times.
+date: 2019-04-06
+description: How to setup ESLint for Typescript easily.
 ---
 
 # Webpack Optimization
 
-WIP
+asdasd

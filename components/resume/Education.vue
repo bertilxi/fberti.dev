@@ -1,9 +1,9 @@
 <template>
   <div class="education">
-    <div>{{ institute }}</div>
-    <div>{{ location }}</div>
-    <div>{{ from }} - {{ to }}</div>
-    <div>{{ title }}</div>
+    <div class="text-bold institute">{{ institute }}</div>
+    <div class="text-gray">{{ location }}</div>
+    <div class="text-bold text-gray">{{ from }} - {{ to }}</div>
+    <h6 class="text-bold title">{{ title }}</h6>
   </div>
 </template>
 
@@ -15,6 +15,10 @@ export default {
 
 <style>
 .education {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.institute,
+.title {
+  font-size: 18px;
 }
 </style>

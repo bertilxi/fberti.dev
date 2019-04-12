@@ -1,9 +1,7 @@
 <template>
-  <div class="card resume-section">
-    <div class="card-body">
-      <h4 class="text-bold text-primary">{{ title }}</h4>
-      <slot />
-    </div>
+  <div class="resume-section">
+    <h4 class="text-bold text-primary resume-title">{{ title }}</h4>
+    <slot />
   </div>
 </template>
 
@@ -15,11 +13,15 @@ export default {
 
 <style>
 .resume-section {
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.resume-title {
+  margin-bottom: 0.75rem;
 }
 @media print {
   .resume-section {
-    margin: 1rem;
+    margin: 0.5rem;
   }
 }
 </style>

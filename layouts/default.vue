@@ -8,7 +8,7 @@
       </section>
       <section class="navbar-section">
         <nuxt-link to="/blog" class="btn btn-link">Blog</nuxt-link>
-        <!-- <nuxt-link to="/resume" class="btn btn-link">Resume</nuxt-link> -->
+        <nuxt-link to="/resume" class="btn btn-link">Resume</nuxt-link>
       </section>
     </header>
     <section class="section my-section">

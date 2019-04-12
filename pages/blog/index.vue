@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div v-for="post in posts" :key="post.title">
-      <BlogPost :post="post" />
-    </div>
+    <BlogPost v-for="post in posts" :key="post.title" :post="post" />
   </div>
 </template>
 
@@ -23,7 +21,7 @@ export default {
       }))
     );
 
-    return Promise.all(promises).then(posts => ({ posts }));
+    return Promise.all(promises).then(posts => ({ posts: posts || [] }));
   }
 };
 </script>

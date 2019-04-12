@@ -40,7 +40,7 @@ export default {
 
   head() {
     return {
-      title: `Fernando Berti - ${this.md.attributes.title}`,
+      title: `Fernando Berti | ${this.md.attributes.title}`,
       meta: [
         {
           hid: "description",

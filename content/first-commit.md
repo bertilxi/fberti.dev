@@ -1,9 +1,9 @@
 ---
-title: My first Blog post!
-year: 2019
-description: The first of all.
+title: First Commit
+date: 2019-04-06
+description: How to setup ESLint for Typescript easily.
 ---
 
-# My first Blog post!
+# First Commit
 
-Hello everybody
+asdads

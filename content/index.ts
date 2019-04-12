@@ -1,6 +1,6 @@
 export default [
   // from Newer to Older
   // "webpack-optimization",
-  // "first-commit"
+  // "first-commit",
   "eslint-typescript"
 ];
