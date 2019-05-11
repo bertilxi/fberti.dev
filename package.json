@@ -6,6 +6,7 @@
   "author": "Fernando Berti <bertilxi@gmail.com>",
   "scripts": {
     "clean": "rm -rf .nuxt node_modules yarn.lock",
+    "predev": "rm -rf .nuxt",
     "dev": "nuxt dev",
     "build": "nuxt build --modern",
     "generate": "nuxt generate --modern",
@@ -18,31 +19,32 @@
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "clipboard": "^2.0.4",
-    "dayjs": "^1.8.12",
-    "nuxt": "^2.6.1",
+    "dayjs": "^1.8.14",
+    "nuxt": "^2.6.3",
     "prism-theme-night-owl": "^1.0.1",
     "prismjs": "^1.16.0",
-    "puppeteer": "^1.14.0",
+    "puppeteer": "^1.15.0",
     "spectre.css": "^0.5.8",
     "typeface-overpass": "^0.0.72",
     "typeface-overpass-mono": "0.0.71"
   },
   "devDependencies": {
-    "@nuxt/typescript": "^2.6.1",
-    "@types/node": "^11.13.4",
-    "@typescript-eslint/eslint-plugin": "^1.6.0",
-    "@typescript-eslint/parser": "^1.6.0",
+    "@nuxt/typescript": "^2.6.3",
+    "@types/node": "^12.0.0",
+    "@typescript-eslint/eslint-plugin": "^1.8.0",
+    "@typescript-eslint/parser": "^1.8.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.2",
     "frontmatter-markdown-loader": "^1.6.0",
     "globby": "^9.2.0",
-    "node-sass": "^4.11.0",
-    "prettier": "^1.16.4",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.17.0",
     "sass-loader": "^7.1.0",
-    "ts-node": "^8.0.3",
-    "typescript": "^3.4.3"
+    "ts-loader": "^6.0.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
   }
 }
