@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .chip {
   background: #0052cc !important;
   color: white !important;

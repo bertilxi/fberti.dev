@@ -4,7 +4,7 @@
     <div class="text-gray">{{ location }}</div>
     <div class="text-gray text-bold">
       {{ fromLabel }} - {{ toLabel }}
-      <span class="chip text-light">{{ elapsedLabel }}</span>
+      <span class="chip time-chip text-light">{{ elapsedLabel }}</span>
     </div>
     <div class="text-bold">{{ position }}</div>
     <br />
@@ -84,7 +84,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .experience {
   margin: 2rem 0;
 }

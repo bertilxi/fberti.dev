@@ -95,6 +95,8 @@
         />
       </Section>
 
+      <div class="pdf-spacer" />
+
       <Section title="Experience">
         <Experience
           name="Skybox"

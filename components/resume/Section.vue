@@ -19,9 +19,4 @@ export default {
 .resume-title {
   margin-bottom: 0.75rem;
 }
-@media print {
-  .resume-section {
-    margin: 0.5rem;
-  }
-}
 </style>
