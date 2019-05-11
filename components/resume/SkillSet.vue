@@ -15,6 +15,7 @@ export default {
 
 <style>
 .chip {
+  margin-left: 0rem !important;
   background: #0052cc !important;
   color: white !important;
   font-weight: bold !important;
