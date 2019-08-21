@@ -7,7 +7,9 @@
       <h3 class="card-title h5 text-bold text-dark">
         {{ post.title }}
       </h3>
-      <div class="card-subtitle text-gray">{{ post.description }}</div>
+      <div class="card-subtitle text-gray">
+        {{ post.description }}
+      </div>
     </div>
   </nuxt-link>
 </template>

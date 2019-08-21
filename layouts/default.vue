@@ -3,19 +3,23 @@
     <header class="navbar app-navbar">
       <section class="navbar-section">
         <nuxt-link to="/" class="brand">
-          <img class="img-responsive" src="~/static/icon.png" width="36" />
+          <span>Fernando Berti</span>
         </nuxt-link>
       </section>
       <section class="navbar-section">
-        <nuxt-link to="/blog" class="btn btn-link">Blog</nuxt-link>
-        <nuxt-link to="/resume" class="btn btn-link">Resume</nuxt-link>
+        <nuxt-link to="/blog" class="btn btn-link">
+          Blog
+        </nuxt-link>
+        <nuxt-link to="/resume" class="btn btn-link">
+          Resume
+        </nuxt-link>
       </section>
     </header>
     <section class="section my-section">
       <nuxt />
     </section>
     <footer class="navbar footer">
-      <section class="navbar-section"></section>
+      <section class="navbar-section" />
       <section class="navbar-section">
         <a class="btn btn-link" @click="mailto()">
           Email
@@ -25,6 +29,7 @@
           class="btn btn-link"
           href="https://www.linkedin.com/in/fernando-ivan-berti-81717b37"
           target="_blank"
+          rel="noopener noreferrer"
         >
           LinkedIn
         </a>
@@ -33,6 +38,7 @@
           class="btn btn-link"
           href="https://github.com/bertilxi"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Github
         </a>
@@ -67,6 +73,9 @@ export default {
   margin-bottom: 0;
   margin-left: 0.3rem;
   margin-right: 0.3rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
 }
 .my-section {
   flex: 1 0;

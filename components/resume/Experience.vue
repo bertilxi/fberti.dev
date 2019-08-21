@@ -1,12 +1,18 @@
 <template>
   <div class="experience">
-    <h5 class="text-bold">{{ name }}</h5>
-    <div class="text-gray">{{ location }}</div>
+    <h5 class="text-bold">
+      {{ name }}
+    </h5>
+    <div class="text-gray">
+      {{ location }}
+    </div>
     <div class="text-gray text-bold">
       {{ fromLabel }} - {{ toLabel }}
       <span class="chip time-chip text-light">{{ elapsedLabel }}</span>
     </div>
-    <div class="text-bold">{{ position }}</div>
+    <div class="text-bold">
+      {{ position }}
+    </div>
     <br />
     <p>
       <slot />

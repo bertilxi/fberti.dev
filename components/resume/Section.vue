@@ -1,6 +1,8 @@
 <template>
   <div class="resume-section">
-    <h4 class="text-bold text-primary resume-title">{{ title }}</h4>
+    <h4 class="text-bold text-primary resume-title">
+      {{ title }}
+    </h4>
     <slot />
   </div>
 </template>

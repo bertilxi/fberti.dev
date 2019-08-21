@@ -1,8 +1,8 @@
-import NuxtConfiguration from "@nuxt/config";
+import { Configuration } from "@nuxt/types";
 import path from "path";
 import posts from "./content";
 
-const config: NuxtConfiguration = {
+const config: Configuration = {
   router: {
     linkExactActiveClass: "active"
   },
@@ -34,6 +34,8 @@ const config: NuxtConfiguration = {
     ]
   },
 
+  buildModules: ["@nuxt/typescript-build"],
+
   build: {
     // cache: true,
     extractCSS: true,
@@ -55,7 +57,7 @@ const config: NuxtConfiguration = {
         // compress: false
       }
     },
-    extend(config) {
+    extend(config: Record<string, any>) {
       if (!config.module) {
         return;
       }
@@ -70,6 +72,12 @@ const config: NuxtConfiguration = {
           }
         }
       });
+    }
+  },
+
+  render: {
+    bundleRenderer: {
+      shouldPrefetch: () => true
     }
   },
 

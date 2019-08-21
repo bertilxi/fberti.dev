@@ -1,27 +1,21 @@
 {
   "compilerOptions": {
-    "incremental": true,
     "target": "esnext",
     "module": "commonjs",
     "moduleResolution": "node",
-    "noImplicitAny": false,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "noUnusedLocals": true,
-    "types": ["node", "jest"],
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
     "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
     "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["esnext", "dom", "dom.iterable"],
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "allowJs": true,
-    "sourceMap": true,
-    "noEmit": true
+    "types": ["@types/node", "@nuxt/types"],
+    "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules"]
 }

@@ -1,10 +1,10 @@
-import puppeteer from "puppeteer";
+import { launch } from "puppeteer";
 import { join } from "path";
 import { writeFileSync, readFileSync } from "fs";
 import globby from "globby";
 
 export const generate = async () => {
-  const browser = await puppeteer.launch({
+  const browser = await launch({
     headless: true,
     args: ["--no-sandbox", "--disable-dev-shm-usage"]
   });

@@ -5,7 +5,9 @@
     >
     <div id="resume" class="resume">
       <Section>
-        <h3 class="text-bold">Fernando Berti</h3>
+        <h3 class="text-bold">
+          Fernando Berti
+        </h3>
       </Section>
 
       <Section title="Contact">
