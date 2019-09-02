@@ -2,11 +2,11 @@
   <div class="experience-container">
     <h5 class="font-bold">{{ name }}</h5>
 
-    <div class="flex">
+    <div class="flex text-xs">
       <div class="w-2/3">
         <div class="text-gray-600 font-bold">
           {{ fromLabel }} - {{ toLabel }}
-          <span class="px-2">|</span>
+          <span class="px-1">|</span>
           <span>{{ elapsedLabel }}</span>
         </div>
       </div>

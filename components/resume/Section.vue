@@ -19,9 +19,12 @@ export default {
 
 <style lang="postcss">
 .section-container {
-  @apply flex flex-col mx-4;
+  @apply flex flex-col mx-4 mb-8;
 }
-.section-container:not(:last-child) {
-  @apply mb-8;
+
+@screen lg {
+  .section-container:last-child {
+    @apply mb-0;
+  }
 }
 </style>

@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div id="resume" class="relative">
-      <button
-        type="button"
-        class="print-button absolute top-0 right-0 mr-4 btn btn-blue"
-        @click="printPdf"
-      >
-        Print PDF
-      </button>
+    <div class="relative">
+      <Section>
+        <button
+          type="button"
+          class="print-button absolute top-0 right-0 mr-4 btn btn-blue"
+          @click="printPdf"
+        >
+          Print PDF
+        </button>
+      </Section>
       <Section>
         <h3 class="text-center text-3xl pb-4">Fernando Berti</h3>
-        <div class="justify-center text-gray-600 flex mb-4">
+        <div class="justify-center text-gray-600 flex flex-wrap mb-4">
           <a
             href="mailto:bertilxi@gmail.com"
             target="_blank"
@@ -36,8 +38,8 @@
           </a>
         </div>
       </Section>
-      <div class="flex mb-16">
-        <div class="w-1/3 border-r-2 border-gray-600">
+      <div class="flex flex-wrap mb-16">
+        <div class="w-full lg:w-1/3 lg:border-r-2 border-gray-600">
           <Section title="Education">
             <Education
               institute="Universidad Tecnológica Nacional"
@@ -96,7 +98,7 @@
             </div>
           </Section>
         </div>
-        <div class="flex-1">
+        <div class="w-full lg:w-2/3">
           <Section title="Profile">
             Fernando is a flexible, pragmatic and proactive software engineer
             and team player.

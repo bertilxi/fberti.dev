@@ -9,7 +9,7 @@
         </div>
       </nuxt-link>
     </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="flex items-center flex-shrink-0">
       <div class="text-sm lg:flex-grow" />
       <div>
         <!-- <nuxt-link
@@ -18,10 +18,7 @@
           >Blog</nuxt-link
         >-->
 
-        <nuxt-link
-          class="block mt-4 lg:inline-block lg:mt-0 hover:text-blue-500 ml-4"
-          to="/resume"
-        >Resume</nuxt-link>
+        <nuxt-link class="hover:text-blue-500 ml-4" to="/resume">Resume</nuxt-link>
       </div>
     </div>
   </nav>
