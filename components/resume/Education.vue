@@ -1,30 +1,22 @@
 <template>
-  <div class="education">
-    <div class="text-bold institute">
-      {{ institute }}
-    </div>
-    <div class="text-gray">
-      {{ location }}
-    </div>
-    <div class="text-bold text-gray">{{ from }} - {{ to }}</div>
-    <h6 class="text-bold title">
-      {{ title }}
-    </h6>
+  <div class="flex-1">
+    <div class="font-bold">{{ institute }}</div>
+    <div class="text-gray-600">{{ location }}</div>
+    <div class="font-bold text-gray-600">{{ from }} - {{ to }}</div>
+    <h6 class="text-bold">{{ title }}</h6>
   </div>
 </template>
 
 <script>
+import { Props } from "@/utils/props";
+
 export default {
-  props: ["institute", "location", "from", "to", "title"]
+  props: {
+    institute: Props.string(),
+    location: Props.string(),
+    from: Props.string(),
+    to: Props.string(),
+    title: Props.string()
+  }
 };
 </script>
-
-<style>
-.education {
-  margin-bottom: 1.5rem;
-}
-.institute,
-.title {
-  font-size: 18px;
-}
-</style>

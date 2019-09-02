@@ -1,24 +1,27 @@
 <template>
-  <div class="resume-section">
-    <h4 class="text-bold text-primary resume-title">
-      {{ title }}
-    </h4>
-    <slot />
+  <div class="section-container">
+    <div class="font-bold text-xl mb-2">{{ title }}</div>
+    <div class="text-gray-700 flex flex-col justify-center text-sm">
+      <slot />
+    </div>
   </div>
 </template>
 
 <script>
+import { Props } from "@/utils/props";
+
 export default {
-  props: ["title"]
+  props: {
+    title: Props.string()
+  }
 };
 </script>
 
-<style>
-.resume-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+<style lang="postcss">
+.section-container {
+  @apply flex flex-col mx-4;
 }
-.resume-title {
-  margin-bottom: 0.75rem;
+.section-container:not(:last-child) {
+  @apply mb-8;
 }
 </style>

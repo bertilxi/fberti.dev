@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <h2>
-      <strong>
-        Hello, I am Fernando, and this is my website.
-      </strong>
-    </h2>
-    <h4>
-      I am a frontend developer, an UI engineer, a Webpack tuner.
-    </h4>
+  <div class="h-64 flex flex-col items-center justify-center">
+    <p class="text-4xl font-light">
+      Hello, I am Fernando, and this is my website.
+    </p>
+    <p class="text-xl text-gray-600">
+      I am a software developer, an UI engineer, a Webpack tuner.
+    </p>
   </div>
 </template>

@@ -1,4 +1,4 @@
-@import "./spectre.scss";
+@import "./tailwind.scss";
 @import "~prism-theme-night-owl/style.css";
 @import "~prismjs/plugins/toolbar/prism-toolbar.css";
 @import "~typeface-overpass/index.css";
@@ -6,8 +6,9 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
+  font-size: 12px;
   font-family: "Overpass Mono", monospace;
-  border-radius: $border-radius;
+  border-radius: 6px;
 
   ::selection {
     background: #7fdbca;
@@ -33,12 +34,6 @@ pre {
   color: #7fdbca;
 }
 
-hr {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: $gray-color;
-}
-
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.2s;
@@ -48,25 +43,45 @@ hr {
   opacity: 0;
 }
 
-.card {
-  border: 0;
-  // box-shadow: 0 1px 0.5rem rgba(48, 55, 66, 0.15);
-  margin-bottom: 1rem;
+.btn {
+  @apply cursor-pointer font-bold py-1 px-2 rounded;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-600;
 }
 
-.btn-link {
-  border-radius: 0;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 $control-padding-x;
-  &.active {
-    border-bottom: 3px solid $primary-color;
-  }
-  &:hover {
-    border-bottom: 3px solid $primary-color;
-  }
+.material-design-icon {
+  display: inline-flex;
+  position: relative;
+  height: 1em;
+  width: 1em;
+}
+.material-design-icon > .material-design-icon__svg {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  position: absolute;
+  bottom: -0.125em;
 }
 
-.menu {
-  box-shadow: none;
+@media print {
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: 1.6cm;
+  }
+
+  * {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 12px;
+  }
+
+  .print-button {
+    display: none;
+  }
 }

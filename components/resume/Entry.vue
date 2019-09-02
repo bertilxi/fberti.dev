@@ -1,17 +1,20 @@
 <template>
-  <div class="columns">
-    <span class="column col-2 col-md-3 text-bold">{{ label }}</span>
-    <a v-if="href" class="column col-auto" :href="href" target="_blank">{{
-      value
-    }}</a>
-    <span v-else class="column col-auto">{{ value }}</span>
+  <div class="flex-1">
+    <span class="font-bold">{{ label }}</span
+    >:
+    <a v-if="href" :href="href" target="_blank">{{ value }}</a>
+    <span v-else>{{ value }}</span>
   </div>
 </template>
 
 <script>
+import { Props } from "@/utils/props";
+
 export default {
-  props: ["label", "value", "href"]
+  props: {
+    label: Props.string(),
+    value: Props.string(),
+    href: Props.string()
+  }
 };
 </script>
-
-<style></style>

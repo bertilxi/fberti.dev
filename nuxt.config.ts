@@ -4,7 +4,7 @@ import posts from "./content";
 
 const config: Configuration = {
   router: {
-    linkExactActiveClass: "active"
+    linkExactActiveClass: "text-blue-500"
   },
 
   css: ["@/assets/styles/main.scss"],
@@ -18,7 +18,7 @@ const config: Configuration = {
     htmlAttrs: {
       lang: "en"
     },
-    title: "Fernando Berti | Frontend Developer",
+    title: "Fernando Berti | Software Engineer",
     meta: [
       { charset: "utf-8" },
       {
@@ -45,17 +45,15 @@ const config: Configuration = {
         collapseWhitespace: true
       }
     },
-    postcss: {
-      plugins: {
-        autoprefixer: {}
-      }
-    },
     terser: {
       terserOptions: {
         // To speed up, uncomment these 2. Bundle size increase though
         // mangle: false,
         // compress: false
       }
+    },
+    postcss: {
+      plugins: [require("tailwindcss"), require("autoprefixer")]
     },
     extend(config: Record<string, any>) {
       if (!config.module) {
@@ -67,9 +65,7 @@ const config: Configuration = {
         loader: "frontmatter-markdown-loader",
         include: path.resolve(__dirname, "content"),
         options: {
-          vue: {
-            root: "dynamicMarkdown"
-          }
+          mode: ["vue-render-functions"]
         }
       });
     }
@@ -81,7 +77,7 @@ const config: Configuration = {
     }
   },
 
-  modules: ["@nuxtjs/pwa"],
+  modules: ["@nuxtjs/pwa", "nuxt-purgecss"],
 
   generate: {
     routes: [...posts.map(post => `/blog/${post}`)]

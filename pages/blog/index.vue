@@ -12,6 +12,11 @@ export default {
   components: {
     BlogPost
   },
+  data() {
+    return {
+      posts: this.posts || []
+    };
+  },
   async asyncData() {
     const promises = posts.map(name =>
       import(`~/content/${name}.md`).then(post => ({

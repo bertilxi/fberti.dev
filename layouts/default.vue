@@ -1,89 +1,16 @@
 <template>
-  <div class="layout container grid-md">
-    <header class="navbar app-navbar">
-      <section class="navbar-section">
-        <nuxt-link to="/" class="brand">
-          <span>Fernando Berti</span>
-        </nuxt-link>
-      </section>
-      <section class="navbar-section">
-        <nuxt-link to="/blog" class="btn btn-link">
-          Blog
-        </nuxt-link>
-        <nuxt-link to="/resume" class="btn btn-link">
-          Resume
-        </nuxt-link>
-      </section>
-    </header>
-    <section class="section my-section">
+  <div class="font-sans text-gray-800 antialiased container mx-auto max-w-4xl">
+    <Nav />
+    <main class="mt-10">
       <nuxt />
-    </section>
-    <footer class="navbar footer">
-      <section class="navbar-section" />
-      <section class="navbar-section">
-        <a class="btn btn-link" @click="mailto()">
-          Email
-        </a>
-
-        <a
-          class="btn btn-link"
-          href="https://www.linkedin.com/in/fernando-ivan-berti-81717b37"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          class="btn btn-link"
-          href="https://github.com/bertilxi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>
-      </section>
-    </footer>
+    </main>
   </div>
 </template>
 
 <script>
+import Nav from "@/components/Nav.vue";
+
 export default {
-  methods: {
-    mailto() {
-      window.open("mailto:bertilxi@gmail.com");
-    }
-  }
+  components: { Nav }
 };
 </script>
-
-<style scoped lang="scss">
-.layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.app-navbar {
-  padding: 1rem 0;
-  z-index: 98;
-}
-.brand {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 0;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
-  display: flex;
-  align-items: center;
-  text-decoration: none !important;
-}
-.my-section {
-  flex: 1 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.footer {
-  align-items: flex-start;
-  margin: 0.5rem 0;
-}
-</style>

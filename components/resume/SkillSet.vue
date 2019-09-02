@@ -1,40 +1,29 @@
 <template>
-  <div class="skillset">
-    <h5>{{ title }}</h5>
-    <span v-for="skill in skills" :key="skill" class="chip">
-      {{ skill }} <span class="separator">, </span>
-    </span>
+  <div class="flex-1">
+    <h5 class="font-bold">{{ title }}</h5>
+    <div>
+      <span
+        v-for="skill in skills"
+        :key="skill"
+        class="inline-block bg-gray-200 rounded-full px-2 py-1 text-xs font-semibold mr-2 mb-1"
+        >{{ skill }}</span
+      >
+    </div>
   </div>
 </template>
 
 <script>
+import { Props } from "@/utils/props";
+
 export default {
-  props: ["title", "skills"]
+  props: {
+    title: Props.string(),
+    skills: {
+      type: Array,
+      default() {
+        return [];
+      }
+    }
+  }
 };
 </script>
-
-<style>
-.chip {
-  margin-left: 0rem !important;
-  background: #0052cc !important;
-  color: white !important;
-  font-weight: bold !important;
-}
-.skillset {
-  margin-bottom: 1rem;
-}
-.separator {
-  display: none;
-}
-@media print {
-  .chip {
-    background: #fff !important;
-    color: #000 !important;
-    font-weight: normal !important;
-    padding: 0;
-  }
-  .separator {
-    display: inline;
-  }
-}
-</style>

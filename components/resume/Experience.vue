@@ -1,32 +1,45 @@
 <template>
-  <div class="experience">
-    <h5 class="text-bold">
-      {{ name }}
-    </h5>
-    <div class="text-gray">
-      {{ location }}
+  <div class="experience-container">
+    <h5 class="font-bold">{{ name }}</h5>
+
+    <div class="flex">
+      <div class="w-2/3">
+        <div class="text-gray-600 font-bold">
+          {{ fromLabel }} - {{ toLabel }}
+          <span class="px-2">|</span>
+          <span>{{ elapsedLabel }}</span>
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="text-gray-600 text-right">{{ location }}</div>
+      </div>
     </div>
-    <div class="text-gray text-bold">
-      {{ fromLabel }} - {{ toLabel }}
-      <span class="chip time-chip text-light">{{ elapsedLabel }}</span>
-    </div>
-    <div class="text-bold">
-      {{ position }}
-    </div>
-    <br />
-    <p>
+
+    <div class="font-bold">{{ position }}</div>
+
+    <p class="my-4">
       <slot />
     </p>
 
-    <div v-if="roles"><strong>Roles:</strong> {{ roles }}</div>
-    <div v-if="technologies">
-      <strong>Technologies:</strong> {{ technologies }}
+    <div v-if="roles">
+      <strong>Roles:</strong>
+      {{ roles }}
     </div>
-    <div v-if="team"><strong>Team:</strong> {{ team }}</div>
+
+    <div v-if="technologies">
+      <strong>Technologies:</strong>
+      {{ technologies }}
+    </div>
+
+    <div v-if="team">
+      <strong>Team:</strong>
+      {{ team }}
+    </div>
   </div>
 </template>
 
 <script>
+import { Props } from "@/utils/props";
 import dayjs from "dayjs";
 import "dayjs/locale/en";
 
@@ -34,17 +47,17 @@ dayjs.locale("en");
 const dateFormat = "MMM YYYY";
 
 export default {
-  props: [
-    "name",
-    "location",
-    "from",
-    "to",
-    "position",
-    "description",
-    "roles",
-    "technologies",
-    "team"
-  ],
+  props: {
+    name: Props.string(),
+    location: Props.string(),
+    from: Props.string(),
+    to: Props.string(),
+    position: Props.string(),
+    description: Props.string(),
+    roles: Props.string(),
+    technologies: Props.string(),
+    team: Props.string()
+  },
   computed: {
     fromLabel() {
       return dayjs(this.from).format(dateFormat);
@@ -90,22 +103,11 @@ export default {
 };
 </script>
 
-<style>
-.experience {
-  margin: 2rem 0;
+<style lang="postcss">
+.experience-container {
+  @apply w-full;
 }
-.chip {
-  margin-left: 1rem;
-  background: #0052cc !important;
-  color: white !important;
-  font-weight: bold !important;
-}
-@media print {
-  .chip {
-    margin-left: 7px;
-    background: #fff !important;
-    color: #ddd !important;
-    font-weight: bold !important;
-  }
+.experience-container:not(:last-child) {
+  @apply mb-8;
 }
 </style>

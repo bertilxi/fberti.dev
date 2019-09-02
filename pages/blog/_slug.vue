@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <div v-html="md.html" /> -->
     <Markdown
       :render="md.vue.render"
       :static-render-fns="md.vue.staticRenderFns"
@@ -25,16 +24,14 @@ export default {
   },
 
   async asyncData({ params }) {
-    const md = await import(`@/content/${params.slug}.md`);
+    const { default: md } = await import(`@/content/${params.slug}.md`);
 
-    return {
-      md
-    };
+    return { md };
   },
 
   mounted() {
     setTimeout(() => {
-      Prism.highlightAll();
+      window.Prism.highlightAll();
     }, 100);
   },
 
