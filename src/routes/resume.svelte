@@ -19,12 +19,12 @@
 <div>
   <div class="relative">
     <Section>
-      <button
+      <!-- <button
         type="button"
         class="print-button absolute top-0 right-0 mr-4 btn btn-blue"
         on:click={printPdf}>
         Print PDF
-      </button>
+      </button> -->
     </Section>
     <Section>
       <h3 class="text-center text-3xl pb-4">Fernando Berti</h3>
