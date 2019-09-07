@@ -2,7 +2,10 @@ const production = process.env.NODE_ENV !== "development";
 
 module.exports = {
   plugins: [
+    require("postcss-import"),
+    require("postcss-url"),
     require("tailwindcss"),
+    production && require("postcss-preset-env"),
     production && require("autoprefixer"),
 
     production &&

@@ -7,8 +7,8 @@ Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultCon
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ["Overpass"],
-      mono: ["Overpass Mono", "Menlo"]
+      sans: ["'Overpass'"],
+      mono: ["'Overpass Mono'", "Menlo"]
     }
   },
   variants: {},

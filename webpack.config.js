@@ -1,7 +1,10 @@
 const webpack = require("webpack");
 const path = require("path");
 const config = require("sapper/config/webpack.js");
-// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const TerserPlugin = require("terser-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
 const pkg = require("./package.json");
 
 const mode = process.env.NODE_ENV;
@@ -11,16 +14,35 @@ const alias = { svelte: path.resolve("node_modules", "svelte") };
 const extensions = [".mjs", ".js", ".json", ".svelte", ".html"];
 const mainFields = ["svelte", "module", "browser", "main"];
 
-const preprocess = require("svelte-preprocess")({
-  postcss: true,
-  scss: true
-});
+const preprocess = require("svelte-preprocess")({ postcss: true });
 
 module.exports = {
   client: {
     entry: config.client.entry(),
     output: config.client.output(),
+    stats: "errors-only",
     resolve: { alias, extensions, mainFields },
+    optimization: dev
+      ? {}
+      : {
+          minimize: true,
+          minimizer: [
+            new TerserPlugin({
+              cache: true,
+              parallel: true,
+              terserOptions: {
+                mangle: true,
+                compress: true
+              }
+            }),
+            new OptimizeCSSAssetsPlugin({
+              cssProcessor: require("cssnano"),
+              cssProcessorOptions: {
+                discardComments: true
+              }
+            })
+          ]
+        },
     module: {
       rules: [
         {
@@ -36,22 +58,8 @@ module.exports = {
           }
         },
         {
-          test: /\.(sa|sc|c)ss$/,
-          use: [
-            {
-              loader: "style-loader"
-            },
-            {
-              loader: "css-loader",
-              options: { importLoaders: 1 }
-            },
-            {
-              loader: "postcss-loader"
-            },
-            {
-              loader: "sass-loader"
-            }
-          ]
+          test: /\.(sa|sc|pc|c)ss$/,
+          use: ["style-loader", "css-loader", "postcss-loader"]
         },
         {
           test: /\.(png|svg|jpg|gif)$/,

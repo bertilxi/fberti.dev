@@ -14,22 +14,22 @@
   </div>
   <div class="flex items-center flex-shrink-0">
     <div class="text-sm lg:flex-grow" />
-    <div>
-      <a
-        class="block mt-4 lg:inline-block lg:mt-0 hover:text-blue-500 ml-4"
-        href="/blog"
-        rel="prefetch"
-        class:text-blue-500={segment === 'blog'}>
-        Blog
-      </a>
 
-      <a
-        class="hover:text-blue-500 ml-4"
-        href="/resume"
-        rel="prefetch"
-        class:text-blue-500={segment === 'resume'}>
-        Resume
-      </a>
-    </div>
+    <a
+      class="hover:text-blue-500 ml-4"
+      href="/blog"
+      rel="prefetch"
+      class:text-blue-500={segment === 'blog'}>
+      Blog
+    </a>
+
+    <a
+      class="hover:text-blue-500 ml-4"
+      href="/resume"
+      rel="prefetch"
+      class:text-blue-500={segment === 'resume'}>
+      Resume
+    </a>
+
   </div>
 </nav>

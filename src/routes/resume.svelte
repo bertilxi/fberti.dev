@@ -32,6 +32,7 @@
         <a
           href="mailto:bertilxi@gmail.com"
           target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex hover:text-gray-800">
           <Icon src={mdiEmail} title="Email" />
           bertilxi@gmail.com
@@ -40,6 +41,7 @@
         <a
           href="https://github.com/bertilxi"
           target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex hover:text-gray-800">
           <Icon src={mdiGithubBox} title="Github" />
           bertilxi
@@ -48,6 +50,7 @@
         <a
           href="https://www.linkedin.com/in/fernando-berti-81717b37"
           target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex hover:text-gray-800">
           <Icon src={mdiLinkedinBox} title="LinkedIn" />
           Fernando Berti

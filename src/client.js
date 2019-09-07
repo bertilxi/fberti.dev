@@ -1,4 +1,4 @@
-import "./styles/main.scss";
+import "./styles/main.pcss";
 import * as sapper from "@sapper/app";
 
 sapper.start({

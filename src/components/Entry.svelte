@@ -9,7 +9,7 @@
     <span class="font-bold">{label}</span>
     :
     {#if href}
-      <a {href} target="_blank">{value}</a>
+      <a {href} target="_blank" rel="noopener noreferrer">{value}</a>
     {:else}
       <span>{value}</span>
     {/if}
