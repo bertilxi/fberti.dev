@@ -4,8 +4,14 @@
   export let segment;
 </script>
 
-<Nav {segment} />
+<style global lang="postcss">
+  @import "../styles/main.pcss"
+</style>
 
-<main class="mt-10">
-  <slot />
-</main>
+<template>
+  <Nav {segment} />
+
+  <main class="mt-10">
+    <slot />
+  </main>
+</template>
