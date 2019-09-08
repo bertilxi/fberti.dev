@@ -11,16 +11,23 @@ const mode = process.env.NODE_ENV;
 const dev = mode === "development";
 
 const alias = { svelte: path.resolve("node_modules", "svelte") };
-const extensions = [".mjs", ".js", ".json", ".svelte", ".html"];
+const extensions = [".mjs", ".js", "ts", ".json", ".svelte", ".html"];
 const mainFields = ["svelte", "module", "browser", "main"];
 
 const preprocess = require("svelte-preprocess")({ postcss: true });
 
+const patchEntry = entry => {
+  Object.keys(entry).forEach(key => {
+    entry[key] = entry[key] + ".ts";
+  });
+
+  return entry;
+};
+
 module.exports = {
   client: {
-    entry: config.client.entry(),
+    entry: patchEntry(config.client.entry()),
     output: config.client.output(),
-    stats: "errors-only",
     resolve: { alias, extensions, mainFields },
     optimization: dev
       ? {}
@@ -45,6 +52,12 @@ module.exports = {
         },
     module: {
       rules: [
+        {
+          test: /\.(js|ts)$/,
+          use: {
+            loader: "babel-loader"
+          }
+        },
         {
           test: /\.(svelte|html)$/,
           use: {
@@ -91,13 +104,19 @@ module.exports = {
   },
 
   server: {
-    entry: config.server.entry(),
+    entry: patchEntry(config.server.entry()),
     output: config.server.output(),
     target: "node",
     resolve: { alias, extensions, mainFields },
     externals: Object.keys(pkg.dependencies).concat("encoding"),
     module: {
       rules: [
+        {
+          test: /\.(js|ts)$/,
+          use: {
+            loader: "babel-loader"
+          }
+        },
         {
           test: /\.(svelte|html)$/,
           use: {
@@ -119,7 +138,7 @@ module.exports = {
   },
 
   serviceworker: {
-    entry: config.serviceworker.entry(),
+    entry: patchEntry(config.serviceworker.entry()),
     output: config.serviceworker.output(),
     mode
   }
