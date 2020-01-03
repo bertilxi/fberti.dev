@@ -1,14 +1,9 @@
-/*
-TailwindCSS Configuration File
-
-Docs: https://tailwindcss.com/docs/configuration
-Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
-*/
 module.exports = {
   theme: {
     fontFamily: {
-      sans: ["'Overpass'"],
-      mono: ["'Overpass Mono'", "Menlo"]
+      sans: ["'Source Sans Pro'", "sans-serif"],
+      mono: ["'Source Code Pro'", "monospace"],
+      serif: ["'Source Serif Pro'", "serif"]
     }
   },
   variants: {},

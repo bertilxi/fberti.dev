@@ -1,31 +1,23 @@
-const path = require("path");
-const fs = require("fs-extra");
-const production = process.env.NODE_ENV !== "development";
+const tailwind = require("tailwindcss");
+const purgeCss = require("@fullhuman/postcss-purgecss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+
+const isProd = process.env.NODE_ENV === "production";
+
+const purgeCssOptions = {
+  content: [
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}"
+  ],
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+};
 
 module.exports = {
   plugins: [
-    require("postcss-import"),
-    require("postcss-url")([
-      {
-        filter: "**/typeface-*/files/*",
-        url: asset => {
-          const basename = path.basename(asset.absolutePath);
-          const destpath = path.join(__dirname, "static", "fonts/");
-
-          fs.copySync(asset.absolutePath, path.join(destpath, basename));
-          return path.join("/fonts", basename);
-        }
-      }
-    ]),
-
-    require("tailwindcss"),
-    production && require("postcss-preset-env"),
-    production && require("autoprefixer"),
-
-    production &&
-      require("@fullhuman/postcss-purgecss")({
-        content: ["./**/*.html", "./**/*.svelte"],
-        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-      })
+    tailwind,
+    isProd && purgeCss(purgeCssOptions),
+    autoprefixer,
+    isProd && cssnano
   ].filter(Boolean)
 };
