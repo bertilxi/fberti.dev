@@ -25,7 +25,7 @@ const Icon: React.FC<Props> = ({
         className="material-design-icon__svg"
         width={size}
         height={size}
-        viewBox="0 0 24 24"
+        viewBox={`0 0 ${size} ${size}`}
       >
         <path d={src}>
           <title>{title}</title>

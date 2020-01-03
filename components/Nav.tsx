@@ -3,7 +3,10 @@ import Link from "./Link";
 
 const Nav: React.FC = () => {
   return (
-    <nav className="app-navbar flex items-center justify-between flex-wrap p-4">
+    <nav
+      id="navbar"
+      className="app-navbar flex items-center justify-between flex-wrap p-4"
+    >
       <div className="flex items-center flex-shrink-0 mr-6">
         <Link href="/">
           <a>

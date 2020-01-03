@@ -9,7 +9,16 @@ const Resume: React.FC = () => {
   return (
     <div>
       <Section>
-        <h3 className="text-center text-5xl pb-4">Fernando Berti</h3>
+        <h3 className="text-center pb-4 relative">
+          <span className="text-5xl">Fernando Berti</span>{" "}
+          <a
+            id="print-button"
+            className="absolute top-0 right-0 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center hidden md:block"
+            href="/resume.pdf"
+          >
+            <span>Download</span>
+          </a>
+        </h3>
         <div className="justify-center text-gray-700 flex flex-wrap text-lg">
           <a
             href="mailto:bertilxi@gmail.com"
@@ -111,7 +120,7 @@ const Resume: React.FC = () => {
           href="https://folderit.net/"
           from="2016/11/01"
           to="2018/06/01"
-          position="Full Stack Developer"
+          position="Fullstack Developer"
           technologies="Javascript, Typescript, Angular, Vue, Webpack,
             Bootstrap, Bulma, MySQL, Postgres Java, SpringBoot, Hibernate."
         />
