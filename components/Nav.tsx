@@ -17,8 +17,8 @@ const Nav: React.FC = () => {
         </Link>
       </div>
       <div className="flex items-center flex-shrink-0">
-        <Link href="/resume" activeClassName="text-blue-500 font-semibold">
-          <a className="hover:text-blue-500 ml-4">Resume</a>
+        <Link href="/resume" activeClassName="text-blue-600 font-semibold">
+          <a className="text-xl hover:text-blue-500 ml-4">Resume</a>
         </Link>
       </div>
     </nav>
