@@ -9,8 +9,7 @@
     "clean": "rm -rf .next out",
     "build": "next build",
     "preexport": "npm run clean; npm run build",
-    "export": "next export",
-    "postexport": "node ./scripts/generate-pdf.js"
+    "export": "next export"
   },
   "keywords": [
     "personal",

@@ -16,7 +16,7 @@ async function generatePdf() {
     waitUntil: "networkidle2"
   });
 
-  const pdfPath = path.resolve(root, "./out/resume.pdf");
+  const pdfPath = path.resolve(root, "./public/resume.pdf");
   await page.pdf({
     path: pdfPath,
     format: "A4",
