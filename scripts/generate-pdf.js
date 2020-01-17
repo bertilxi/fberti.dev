@@ -10,7 +10,18 @@ async function generatePdf() {
   const child = exec("npx serve out");
   await timeout(500);
 
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: [
+      "--disable-gpu",
+      "--disable-dev-shm-usage",
+      "--disable-setuid-sandbox",
+      "--no-first-run",
+      "--no-sandbox",
+      "--no-zygote",
+      "--single-process"
+    ]
+  });
   const page = await browser.newPage();
   await page.goto("http://localhost:5000/resume", {
     waitUntil: "networkidle2"

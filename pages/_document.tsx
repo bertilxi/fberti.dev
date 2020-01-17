@@ -25,7 +25,6 @@ export default class MyDocument extends Document {
             type="image/png"
             href="/images/icons/icon-72x72.png"
           />
-          <title>Fernando Berti · Software Engineer</title>
         </Head>
 
         <body className="font-sans text-lg text-gray-800 antialiased container mx-auto max-w-4xl">

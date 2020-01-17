@@ -24,7 +24,7 @@ const Resume: React.FC = () => {
             href="mailto:bertilxi@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex hover:text-gray-900"
+            className="flex hover:text-gray-900 p-1"
           >
             <Icon src={mdiEmail} title="Email" />
             bertilxi@gmail.com
@@ -34,7 +34,7 @@ const Resume: React.FC = () => {
             href="https://github.com/bertilxi"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex hover:text-gray-900"
+            className="flex hover:text-gray-900 p-1"
           >
             <Icon src={mdiGithubBox} title="Github" />
             bertilxi
@@ -44,7 +44,7 @@ const Resume: React.FC = () => {
             href="https://www.linkedin.com/in/fernando-berti-81717b37"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex hover:text-gray-900"
+            className="flex hover:text-gray-900 p-1"
           >
             <Icon src={mdiLinkedinBox} title="LinkedIn" />
             Fernando Berti
