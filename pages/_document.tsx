@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
           />
         </Head>
 
-        <body className="font-sans text-lg antialiased container mx-auto max-w-4xl">
+        <body className="font-sans text-lg antialiased container mx-auto max-w-5xl">
           <Main />
           <NextScript />
         </body>

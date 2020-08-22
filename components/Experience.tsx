@@ -25,6 +25,7 @@ const Experience: React.FC<Props> = ({
   roles,
   technologies,
   team,
+  children,
 }) => {
   const fromLabel = dayjs(from).format(dateFormat);
   const toLabel = to ? dayjs(to).format(dateFormat) : "Present";
@@ -67,17 +68,18 @@ const Experience: React.FC<Props> = ({
   const elapsedLabel = getElapsedLabel();
 
   return (
-    <div className="experience-container w-full mb-4">
+    <div className="w-full mb-4">
       <div className="font-semibold text-xl">
-        {position} @{" "}
         <a
-          className="font-semibold text-blue-500"
+          className="font-semibold text-indigo-500"
           href={href}
           target="_blank"
           rel="noopener noreferrer"
         >
           {name}
         </a>
+
+        <p>{position}</p>
       </div>
 
       <div className="flex">
@@ -110,6 +112,8 @@ const Experience: React.FC<Props> = ({
           {team}
         </p>
       )}
+
+      {children && <p className="my-2">{children}</p>}
     </div>
   );
 };

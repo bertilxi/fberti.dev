@@ -4,6 +4,11 @@ module.exports = {
     fontFamily: {
       sans: ["'Source Sans Pro'", "sans-serif"],
     },
+    extend: {
+      screens: {
+        print: { raw: "print" },
+      },
+    },
   },
   variants: {},
   plugins: [],

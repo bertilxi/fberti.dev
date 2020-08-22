@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const path = require("path");
 const { exec } = require("child_process");
 
-const timeout = time => new Promise(resolve => setTimeout(resolve, time));
+const timeout = (time) => new Promise((resolve) => setTimeout(resolve, time));
 
 const root = path.resolve(process.cwd());
 
@@ -19,12 +19,12 @@ async function generatePdf() {
       "--no-first-run",
       "--no-sandbox",
       "--no-zygote",
-      "--single-process"
-    ]
+      "--single-process",
+    ],
   });
   const page = await browser.newPage();
   await page.goto("http://localhost:5000/resume", {
-    waitUntil: "networkidle2"
+    waitUntil: "networkidle2",
   });
 
   const pdfPath = path.resolve(root, "./public/resume.pdf");
@@ -36,8 +36,8 @@ async function generatePdf() {
       left: "0px",
       top: "0px",
       right: "0px",
-      bottom: "0px"
-    }
+      bottom: "0px",
+    },
   });
 
   child.kill();

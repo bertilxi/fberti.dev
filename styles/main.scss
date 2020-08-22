@@ -3,11 +3,15 @@
 @import "~tailwindcss/utilities";
 
 body {
+  @apply text-gray-800 bg-gray-200;
+}
+
+.dark-mode {
   @apply text-gray-200 bg-gray-800;
 }
 
-.light-mode {
-  @apply text-gray-800 bg-gray-200;
+.list {
+  list-style: inside;
 }
 
 .material-design-icon {
@@ -36,6 +40,7 @@ body {
 
   body {
     margin: 1.6cm;
+    margin-top: 0.5cm;
   }
 
   * {
@@ -46,6 +51,7 @@ body {
 
   #print-button,
   #navbar {
-    display: none;
+    display: none !important;
+    height: 0px !important;
   }
 }

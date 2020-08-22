@@ -22,9 +22,7 @@ const ActiveLink: React.FC<Props> = ({
   }
 
   return (
-    <Link prefetch href={href}>
-      {React.cloneElement(childElement, { className })}
-    </Link>
+    <Link href={href}>{React.cloneElement(childElement, { className })}</Link>
   );
 };
 
