@@ -162,7 +162,7 @@ const Resume: React.FC = () => (
                 telegram notifications.
               </li>
               <li>
-                Constantly research and analyzing flash loan arbitrage
+                Constantly researching and analyzing flash loan arbitrage
                 opportunities.
               </li>
               <li>Currently learning solidity.</li>
