@@ -71,7 +71,7 @@ const Resume: React.FC = () => {
             "Java",
             "Kotlin",
             "Android",
-            "Bash"
+            "Bash",
           ]}
         />
         <span className="mb-4" />
@@ -90,12 +90,21 @@ const Resume: React.FC = () => {
             "Maven",
             "Gradle",
             "Jira",
-            "Jenkins"
+            "Jenkins",
           ]}
         />
       </Section>
 
       <Section title="Experience">
+        <Experience
+          name="National Home Rentals"
+          href="https://www.nationalhomerentals.com/"
+          from="2020/02/10"
+          to=""
+          position="Frontend Engineer"
+          technologies="Typescript, React."
+        />
+
         <Experience
           name="Scratchpay"
           href="https://scratchpay.com/"
