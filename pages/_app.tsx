@@ -1,26 +1,21 @@
 import "../styles/main.scss";
 
-import "typeface-source-sans-pro";
-import "typeface-source-serif-pro";
-import "typeface-source-code-pro";
-
 import Head from "next/head";
-import React from "react";
-import App from "next/app";
+import React, { FC } from "react";
+import { AppProps } from "next/app";
 import Nav from "../components/Nav";
 
-export default class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
+const MyApp: FC<AppProps> = ({ Component, pageProps }) => (
+  <>
+    <Head>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <meta name="theme-color" content="#4299e1" />
+      <meta name="Description" content="Fernando Berti · Software Developer" />
+      <title>Fernando Berti · Software Developer</title>
+    </Head>
+    <Nav />
+    <Component {...pageProps} />
+  </>
+);
 
-    return (
-      <>
-        <Head>
-          <title>Fernando Berti · Software Engineer</title>
-        </Head>
-        <Nav />
-        <Component {...pageProps} />
-      </>
-    );
-  }
-}
+export default MyApp;

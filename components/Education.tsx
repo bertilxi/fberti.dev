@@ -13,13 +13,13 @@ const Education: React.FC<Props> = ({
   location,
   from,
   to,
-  title
+  title,
 }) => {
   return (
     <div className="flex-1">
       <div className="font-semibold">{institute}</div>
-      <div className="text-gray-700">{location}</div>
-      <div className="font-semibold text-gray-700">
+      <div>{location}</div>
+      <div className="font-semibold">
         {from} - {to}
       </div>
       <h6 className="font-semibold">{title}</h6>

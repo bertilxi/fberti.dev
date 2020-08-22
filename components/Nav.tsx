@@ -1,5 +1,8 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Link from "./Link";
+
+const DarkMode = dynamic(() => import("./DarkMode"), { ssr: false });
 
 const Nav: React.FC = () => {
   return (
@@ -17,8 +20,10 @@ const Nav: React.FC = () => {
         </Link>
       </div>
       <div className="flex items-center flex-shrink-0">
-        <Link href="/resume" activeClassName="text-blue-600 font-semibold">
-          <a className="text-xl hover:text-blue-500 ml-4">Resume</a>
+        <DarkMode />
+
+        <Link href="/resume" activeClassName="text-blue-500 font-semibold">
+          <a className="text-xl hover:font-semibold ml-4">Resume</a>
         </Link>
       </div>
     </nav>

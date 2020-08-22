@@ -1,4 +1,4 @@
-import { mdiEmail, mdiGithubBox, mdiLinkedinBox } from "@mdi/js";
+import { mdiEmail, mdiGithub, mdiLinkedin } from "@mdi/js";
 import React from "react";
 import Experience from "../components/Experience";
 import Icon from "../components/Icon";
@@ -13,18 +13,18 @@ const Resume: React.FC = () => {
           <span className="text-5xl">Fernando Berti</span>{" "}
           <a
             id="print-button"
-            className="absolute top-0 right-0 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded inline-flex items-center hidden md:block"
+            className="absolute top-0 right-0 bg-blue-500 text-gray-200 hover:bg-blue-600 font-semibold py-2 px-4 rounded inline-flex items-center hidden md:block"
             href="/resume.pdf"
           >
             <span>Download</span>
           </a>
         </h3>
-        <div className="justify-center text-gray-700 flex flex-wrap text-lg">
+        <div className="justify-center flex flex-wrap text-lg">
           <a
             href="mailto:bertilxi@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex hover:text-gray-900 p-1"
+            className="flex hover:text-blue-500 p-1"
           >
             <Icon src={mdiEmail} title="Email" />
             bertilxi@gmail.com
@@ -34,9 +34,9 @@ const Resume: React.FC = () => {
             href="https://github.com/bertilxi"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex hover:text-gray-900 p-1"
+            className="flex hover:text-blue-500 p-1"
           >
-            <Icon src={mdiGithubBox} title="Github" />
+            <Icon src={mdiGithub} title="Github" />
             bertilxi
           </a>
           <span className="px-2" />
@@ -44,22 +44,12 @@ const Resume: React.FC = () => {
             href="https://www.linkedin.com/in/fernando-berti-81717b37"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex hover:text-gray-900 p-1"
+            className="flex hover:text-blue-500 p-1"
           >
-            <Icon src={mdiLinkedinBox} title="LinkedIn" />
+            <Icon src={mdiLinkedin} title="LinkedIn" />
             Fernando Berti
           </a>
         </div>
-      </Section>
-
-      <Section title="Profile">
-        <p className="text-justify">
-          Fernando is a flexible, pragmatic and proactive software engineer and
-          team player. He thinks the most important part of development process
-          is deliver quality. Challenging environments and new technologies are
-          his strength. Always striving for simplest solutions for a full
-          featured and smooth user experience.
-        </p>
       </Section>
 
       <Section title="Skills">
@@ -101,7 +91,7 @@ const Resume: React.FC = () => {
           href="https://www.nationalhomerentals.com/"
           from="2020/02/10"
           to=""
-          position="Frontend Engineer"
+          position="Frontend Developer"
           technologies="Typescript, React."
         />
 
@@ -110,7 +100,7 @@ const Resume: React.FC = () => {
           href="https://scratchpay.com/"
           from="2019/09/23"
           to="2019/12/31"
-          position="Fullstack Engineer"
+          position="Fullstack Developer"
           technologies="Javascript, Aurelia, Node, ActionHero, Knex, PHP, Laravel, MySQL."
         />
 
@@ -119,9 +109,8 @@ const Resume: React.FC = () => {
           href="https://skybox.vividseats.com/"
           from="2018/06/01"
           to="2019/09/23"
-          position="Frontend Engineer"
-          technologies="Javascript, Typescript, AngularJS, React, Webpack,
-            Bootstrap, MySQL, Java, MyBatis, Jersey."
+          position="Frontend Developer"
+          technologies="Javascript, Typescript, AngularJS, React, Webpack, Bootstrap, MySQL, Java, MyBatis, Jersey."
         />
 
         <Experience
@@ -130,8 +119,7 @@ const Resume: React.FC = () => {
           from="2016/11/01"
           to="2018/06/01"
           position="Fullstack Developer"
-          technologies="Javascript, Typescript, Angular, Vue, Webpack,
-            Bootstrap, Bulma, MySQL, Postgres Java, SpringBoot, Hibernate."
+          technologies="Javascript, Typescript, Angular, Vue, Webpack, Bootstrap, Bulma, MySQL, Postgres Java, SpringBoot, Hibernate."
         />
       </Section>
     </div>

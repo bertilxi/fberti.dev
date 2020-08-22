@@ -1,11 +1,13 @@
 module.exports = {
+  purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
       sans: ["'Source Sans Pro'", "sans-serif"],
-      mono: ["'Source Code Pro'", "monospace"],
-      serif: ["'Source Serif Pro'", "serif"]
-    }
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 };

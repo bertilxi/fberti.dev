@@ -24,7 +24,7 @@ const Experience: React.FC<Props> = ({
   position,
   roles,
   technologies,
-  team
+  team,
 }) => {
   const fromLabel = dayjs(from).format(dateFormat);
   const toLabel = to ? dayjs(to).format(dateFormat) : "Present";
@@ -41,7 +41,7 @@ const Experience: React.FC<Props> = ({
     const year = Math.floor(month / 12);
     return {
       month: month % 12,
-      year
+      year,
     };
   }, [from, to]);
 
@@ -82,7 +82,7 @@ const Experience: React.FC<Props> = ({
 
       <div className="flex">
         <div className="w-2/3">
-          <div className="text-gray-700 text-base">
+          <div className="text-base">
             {fromLabel} - {toLabel}
             <span className="px-2">·</span>
             <span>{elapsedLabel}</span>

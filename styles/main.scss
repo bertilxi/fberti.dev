@@ -2,6 +2,14 @@
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
 
+body {
+  @apply text-gray-200 bg-gray-800;
+}
+
+.light-mode {
+  @apply text-gray-800 bg-gray-200;
+}
+
 .material-design-icon {
   display: inline-flex;
   position: relative;

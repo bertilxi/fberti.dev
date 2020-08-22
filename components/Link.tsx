@@ -10,7 +10,7 @@ interface Props {
 const ActiveLink: React.FC<Props> = ({
   href,
   children,
-  activeClassName = ""
+  activeClassName = "",
 }) => {
   const router = useRouter();
 
@@ -22,7 +22,9 @@ const ActiveLink: React.FC<Props> = ({
   }
 
   return (
-    <Link href={href}>{React.cloneElement(childElement, { className })}</Link>
+    <Link prefetch href={href}>
+      {React.cloneElement(childElement, { className })}
+    </Link>
   );
 };
 
