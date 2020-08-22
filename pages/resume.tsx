@@ -51,7 +51,7 @@ const Resume: React.FC = () => (
 
           <a
             id="print-button"
-            className="absolute top-0 right-0 bg-indigo-500 text-gray-200 hover:bg-indigo-600 font-semibold py-2 px-4 rounded-full inline-flex items-center hidden md:block"
+            className="absolute top-0 right-0 bg-indigo-500 text-gray-200 hover:bg-indigo-600 font-semibold py-2 px-4 rounded-full inline-flex items-center block"
             href="/resume.pdf"
           >
             <span>Download</span>
@@ -140,7 +140,7 @@ const Resume: React.FC = () => (
             from="2020/01/07"
             to=""
             position="Developer and Data Analyst"
-            technologies="Python, Node, React, web3 js, Graph protocol, Uniswap, Kyber, Balancer"
+            technologies="Python, Node, React, web3 js, Graph protocol, Uniswap, Kyber, Balancer."
           >
             <ul className="list">
               <li>
@@ -150,21 +150,22 @@ const Resume: React.FC = () => (
                     Wini recovery
                   </a>
                 </Link>
+                .
               </li>
-              <li>Developed stablecoins arbitrage bot</li>
+              <li>Developed stablecoins arbitrage bot.</li>
               <li>
                 Participated in Loopring liquidity mining bot competition and
-                Loopring pay gitcoin grant
+                Loopring pay gitcoin grant.
               </li>
               <li>
-                Scripted Node js service for monitoring Balancer protocol with
-                telegram notifications
+                Scripted Node js service to monitor Balancer protocol and send
+                telegram notifications.
               </li>
               <li>
-                Constantly research and analyze flash loan arbitrage
-                opportunities
+                Constantly research and analyzing flash loan arbitrage
+                opportunities.
               </li>
-              <li>Currently learning solidity</li>
+              <li>Currently learning solidity.</li>
             </ul>
           </Experience>
 
@@ -215,7 +216,7 @@ const Resume: React.FC = () => (
                 technologies for USA and Argentina clients mainly.
               </li>
               <li>
-                Contributed in the making and maintenance of internal tools
+                Contributed in the making and maintenance of internal tools.
               </li>
             </ul>
           </Experience>
