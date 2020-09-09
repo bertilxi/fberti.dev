@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Fernando Berti's Website",
   "scripts": {
+    "analyze": "ANALYZE=true npm run build",
     "dev": "next",
     "start": "next start",
     "clean": "rm -rf .next out",
@@ -21,20 +22,21 @@
   "dependencies": {
     "@mdi/js": "^5.5.55",
     "classnames": "^2.2.6",
-    "dayjs": "^1.8.34",
-    "next": "^9.5.2",
+    "dayjs": "^1.8.35",
+    "next": "^9.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-text-loop": "^2.3.0",
     "sass": "^1.26.10",
-    "tailwindcss": "^1.7.3",
+    "tailwindcss": "^1.8.5",
     "typeface-source-sans-pro": "1.1.5"
   },
   "devDependencies": {
-    "serve": "^11.3.2",
-    "@types/node": "^14.6.0",
-    "@types/react": "^16.9.46",
+    "@next/bundle-analyzer": "^9.5.3",
+    "@types/node": "^14.6.4",
+    "@types/react": "^16.9.49",
     "puppeteer": "^5.2.1",
+    "serve": "^11.3.2",
     "typescript": "^4.0.2"
   }
 }
