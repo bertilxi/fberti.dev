@@ -122,7 +122,7 @@ const Resume: React.FC = () => (
             name="National Home Rentals"
             href="https://www.nationalhomerentals.com/"
             from="2020/02/10"
-            to=""
+            to="2020/09/04"
             position="Frontend Developer"
             technologies="Typescript, React."
           >
