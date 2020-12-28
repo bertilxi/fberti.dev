@@ -12,7 +12,7 @@ const Nav: React.FC = () => (
     <div className="flex items-center flex-shrink-0 mr-6">
       <Link href="/">
         <a>
-          <div className="bg-indigo-500 text-white text-xl font-semibold h-8 w-8 rounded-full flex items-center justify-center">
+          <div className="bg-primary-500 text-white text-xl font-medium h-8 w-8 rounded-full flex items-center justify-center">
             <span>FB</span>
           </div>
         </a>
@@ -21,8 +21,11 @@ const Nav: React.FC = () => (
     <div className="flex items-center flex-shrink-0">
       <DarkMode />
 
-      <Link href="/resume" activeClassName="text-indigo-600">
-        <a className="text-xl hover:font-semibold ml-4">Resume</a>
+      <Link
+        href="/resume"
+        activeClassName="text-primary-600 dark:text-primary-400"
+      >
+        <a className="text-xl hover:font-medium ml-4">Resume</a>
       </Link>
     </div>
   </nav>

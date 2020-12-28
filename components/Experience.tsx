@@ -69,9 +69,9 @@ const Experience: React.FC<Props> = ({
 
   return (
     <div className="w-full mb-4">
-      <div className="font-semibold text-xl">
+      <div className="font-medium text-lg">
         <a
-          className="font-semibold text-indigo-500"
+          className="font-medium text-primary-500 dark:text-primary-400"
           href={href}
           target="_blank"
           rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const Experience: React.FC<Props> = ({
 
       <div className="flex">
         <div className="w-2/3">
-          <div className="text-base">
+          <div>
             {fromLabel} - {toLabel}
             <span className="px-2">·</span>
             <span>{elapsedLabel}</span>
@@ -94,21 +94,21 @@ const Experience: React.FC<Props> = ({
 
       {roles && (
         <p>
-          <label className="font-semibold">Roles: </label>
+          <label className="font-medium">Roles: </label>
           {roles}
         </p>
       )}
 
       {technologies && (
         <p>
-          <label className="font-semibold">Technologies: </label>
+          <label className="font-medium">Technologies: </label>
           {technologies}
         </p>
       )}
 
       {team && (
         <p>
-          <label className="font-semibold">Team: </label>
+          <label className="font-medium">Team: </label>
           {team}
         </p>
       )}

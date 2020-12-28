@@ -1,6 +1,6 @@
 import React, { FC, useState, useLayoutEffect, useCallback } from "react";
 import { mdiWhiteBalanceSunny, mdiWeatherNight } from "@mdi/js";
-import Icon from "./Icon";
+import Icon from "@mdi/react";
 
 const DarkMode: FC = () => {
   const [darkMode, setDarkMode] = useState(
@@ -9,12 +9,9 @@ const DarkMode: FC = () => {
 
   useLayoutEffect(() => {
     if (darkMode) {
-      document.getElementsByTagName("body").item(0)?.classList.add("dark-mode");
+      document.querySelector("html").classList.add("dark");
     } else {
-      document
-        .getElementsByTagName("body")
-        .item(0)
-        ?.classList.remove("dark-mode");
+      document.querySelector("html").classList.remove("dark");
     }
   }, [darkMode]);
 
@@ -30,9 +27,9 @@ const DarkMode: FC = () => {
       onClick={toggle}
     >
       {darkMode ? (
-        <Icon src={mdiWhiteBalanceSunny} title="Set Light Mode" />
+        <Icon path={mdiWhiteBalanceSunny} size={1} title="Set Light Mode" />
       ) : (
-        <Icon src={mdiWeatherNight} title="Set Dark Mode" />
+        <Icon path={mdiWeatherNight} size={1} title="Set Dark Mode" />
       )}
     </button>
   );

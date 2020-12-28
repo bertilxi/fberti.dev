@@ -16,7 +16,7 @@ const Education: React.FC<Props> = ({
   title,
 }) => (
   <div className="w-full mb-4">
-    <div className="font-semibold">
+    <div className="font-medium">
       <p>{institute}</p>
       <p>{location}</p>
     </div>

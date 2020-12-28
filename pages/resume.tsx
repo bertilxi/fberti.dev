@@ -1,30 +1,26 @@
 import { mdiEmail, mdiGithub, mdiLinkedin } from "@mdi/js";
 import React from "react";
 import Experience from "../components/Experience";
-import Icon from "../components/Icon";
 import Section from "../components/Section";
 import SkillSet from "../components/SkillSet";
-import Link from "../components/Link";
 import Education from "../components/Education";
+import Icon from "@mdi/react";
 
 const Resume: React.FC = () => (
   <div>
     <Section>
       <div className="flex flex-wrap relative">
-        <div className="w-full print:w-1/3 md:w-1/3 flex items-center justify-center">
-          <img src="/images/profile.jpg" className="rounded-full w-56" />
-        </div>
-        <div className="w-full print:flex-1 md:flex-1 flex flex-col items-center justify-center">
-          <div className="text-5xl">Fernando Berti</div>
-          <div className="text-4xl mb-2">Software Developer</div>
-          <div className="flex flex-wrap text-lg items-center justify-center">
+        <div className="w-full mt-16 print:mt-8 print:flex-1 md:flex-1 flex flex-col items-center justify-center">
+          <div className="text-4xl mb-4">Fernando Berti</div>
+          <div className="text-3xl mb-4">Software Developer</div>
+          <div className="flex flex-wrap items-center justify-center mb-4">
             <a
               href="mailto:bertilxi@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex hover:text-indigo-500 p-1"
+              className="flex items-center hover:text-primary-500 p-1"
             >
-              <Icon src={mdiEmail} title="Email" />
+              <Icon path={mdiEmail} size={1} title="Email" className="mr-1" />
               bertilxi@gmail.com
             </a>
             <span className="px-2" />
@@ -32,9 +28,9 @@ const Resume: React.FC = () => (
               href="https://github.com/bertilxi"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex hover:text-indigo-500 p-1"
+              className="flex items-center hover:text-primary-500 p-1"
             >
-              <Icon src={mdiGithub} title="Github" />
+              <Icon path={mdiGithub} size={1} title="Github" className="mr-1" />
               bertilxi
             </a>
             <span className="px-2" />
@@ -42,16 +38,21 @@ const Resume: React.FC = () => (
               href="https://www.linkedin.com/in/fernando-berti-81717b37"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex hover:text-indigo-500 p-1"
+              className="flex items-center hover:text-primary-500 p-1"
             >
-              <Icon src={mdiLinkedin} title="LinkedIn" />
+              <Icon
+                path={mdiLinkedin}
+                size={1}
+                title="LinkedIn"
+                className="mr-1"
+              />
               Fernando Berti
             </a>
           </div>
 
           <a
             id="print-button"
-            className="absolute top-0 right-0 bg-indigo-500 text-gray-200 hover:bg-indigo-600 font-semibold py-2 px-4 rounded-full inline-flex items-center block"
+            className="absolute top-0 right-0 bg-primary-500 text-gray-200 hover:bg-primary-600 font-medium py-2 px-4 rounded-full inline-flex items-center block"
             href="/resume.pdf"
           >
             <span>Download</span>
@@ -65,15 +66,9 @@ const Resume: React.FC = () => (
         <Section title="Skills">
           <SkillSet
             title="Programming"
-            skills={[
-              "Typescript",
-              "JavaScript",
-              "Java",
-              "Kotlin",
-              "Android",
-              "Bash",
-            ]}
+            skills={["Typescript", "JavaScript", "Node", "Java", "Python"]}
           />
+
           <span className="mb-4" />
 
           <SkillSet
@@ -90,7 +85,6 @@ const Resume: React.FC = () => (
               "Docker",
               "Intelli J",
               "Maven",
-              "Gradle",
               "Jira",
               "Jenkins",
             ]}
@@ -132,40 +126,6 @@ const Resume: React.FC = () => (
                 management platform.
               </li>
               <li>IOT integration for remote property management.</li>
-            </ul>
-          </Experience>
-
-          <Experience
-            name="Freelance crypto research"
-            from="2020/01/07"
-            to=""
-            position="Developer and Data Analyst"
-            technologies="Python, Node, React, web3 js, Graph protocol, Uniswap, Kyber, Balancer."
-          >
-            <ul className="list">
-              <li>
-                Contributed to{" "}
-                <Link href="https://github.com/threelab/wini-recovery">
-                  <a className="hover:font-semibold text-indigo-500">
-                    Wini recovery
-                  </a>
-                </Link>
-                .
-              </li>
-              <li>Developed stablecoins arbitrage bot.</li>
-              <li>
-                Participated in Loopring liquidity mining bot competition and
-                Loopring pay gitcoin grant.
-              </li>
-              <li>
-                Scripted Node js service to monitor Balancer protocol and send
-                telegram notifications.
-              </li>
-              <li>
-                Constantly researching and analyzing flash loan arbitrage
-                opportunities.
-              </li>
-              <li>Currently learning solidity.</li>
             </ul>
           </Experience>
 

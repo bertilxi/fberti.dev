@@ -1,4 +1,4 @@
-import "../styles/main.scss";
+import "../styles/main.css";
 
 import Head from "next/head";
 import React, { FC } from "react";
